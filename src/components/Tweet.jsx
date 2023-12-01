@@ -4,6 +4,7 @@ import ProfileImage from "./ProfileImage";
 import User from "./User";
 import Timestamp from "./Timestamp";
 import Message from "./Message";
+import Actions from "./Actions";
 
 function Tweet({tweet}) {
   return (
@@ -32,19 +33,22 @@ function Tweet({tweet}) {
             <Timestamp time={tweet.timestamp} />
           {/* <span className="timestamp">{tweet.timestamp}</span> */}
         </div>
-        {/* // iteration 6 */}
+        {/* // iteration 7 */}
         {/* extracted to Message.jsx */}
         {/* <p className="message">
         {tweet.message}
         </p> */}
         <Message message={tweet.message} />
-        <div className="actions">
-          {/* Font Awesome icons */}
+        {/* // iteration 8 */}
+        {/* extracted to Actions.jsx */}
+        {/* Font Awesome icons */}
+        {/* <div className="actions">
           <i className="far fa-comment" data-testid="comment-icon"></i>
           <i className="fas fa-retweet" data-testid="retweet-icon"></i>
           <i className="far fa-heart" data-testid="heart-icon"></i>
           <i className="fas fa-share" data-testid="share-icon"></i>
-        </div>
+        </div> */}
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
