@@ -3,6 +3,7 @@
 import ProfileImage from "./ProfileImage";
 import User from "./User";
 import Timestamp from "./Timestamp";
+import Message from "./Message";
 
 function Tweet({tweet}) {
   return (
@@ -31,11 +32,12 @@ function Tweet({tweet}) {
             <Timestamp time={tweet.timestamp} />
           {/* <span className="timestamp">{tweet.timestamp}</span> */}
         </div>
-
-        <p className="message">
+        {/* // iteration 6 */}
+        {/* extracted to Message.jsx */}
+        {/* <p className="message">
         {tweet.message}
-        </p>
-
+        </p> */}
+        <Message message={tweet.message} />
         <div className="actions">
           {/* Font Awesome icons */}
           <i className="far fa-comment" data-testid="comment-icon"></i>
