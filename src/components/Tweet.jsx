@@ -1,16 +1,21 @@
 //inserted props {tweet} here, iteration 2
 
+import ProfileImage from "./ProfileImage";
+
 function Tweet({tweet}) {
   return (
     <div className="tweet">
-      <img
+      {/* // iteration 4 */}
+       <ProfileImage image={tweet.user.image} />
+       {/* extracted to ProfileImage.jsx */}
+      {/* <img
       //added the image, username, handle, timestamp
         src={tweet.user.image} 
         className="profile"
         alt="profile"
-      />
+      /> */}
 
-      <div className="body">
+      <div className="body">  
         <div className="top">
           <span className="user">
             <span className="name">{tweet.user.name}</span>
