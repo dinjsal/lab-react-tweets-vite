@@ -2,6 +2,7 @@
 
 import ProfileImage from "./ProfileImage";
 import User from "./User";
+import Timestamp from "./Timestamp";
 
 function Tweet({tweet}) {
   return (
@@ -20,13 +21,15 @@ function Tweet({tweet}) {
         <div className="top">
           {/* // iteration 5 */}
             {/* extracted to User.jsx */}
-            <User name={tweet.user.name} handle={tweet.user.handle} />
+          <User name={tweet.user.name} handle={tweet.user.handle} />
           {/* <span className="user">
             <span className="name">{tweet.user.name}</span>
             <span className="handle">{tweet.user.handle}</span>
           </span> */}
-
-          <span className="timestamp">{tweet.timestamp}</span>
+          {/* // iteration 6 */}
+            {/* extracted to Timestamp.jsx */}
+            <Timestamp time={tweet.timestamp} />
+          {/* <span className="timestamp">{tweet.timestamp}</span> */}
         </div>
 
         <p className="message">
