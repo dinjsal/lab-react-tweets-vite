@@ -1,6 +1,7 @@
 //inserted props {tweet} here, iteration 2
 
 import ProfileImage from "./ProfileImage";
+import User from "./User";
 
 function Tweet({tweet}) {
   return (
@@ -17,10 +18,13 @@ function Tweet({tweet}) {
 
       <div className="body">  
         <div className="top">
-          <span className="user">
+          {/* // iteration 5 */}
+            {/* extracted to User.jsx */}
+            <User name={tweet.user.name} handle={tweet.user.handle} />
+          {/* <span className="user">
             <span className="name">{tweet.user.name}</span>
             <span className="handle">{tweet.user.handle}</span>
-          </span>
+          </span> */}
 
           <span className="timestamp">{tweet.timestamp}</span>
         </div>
