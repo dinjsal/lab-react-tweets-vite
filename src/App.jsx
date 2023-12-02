@@ -45,6 +45,11 @@ function App() {
       <Tweet tweet={ tweetsArray[0] }/>
       <Tweet tweet={ tweetsArray[1] }/>
       <Tweet tweet={ tweetsArray[2] }/>
+
+      {/* .mapping the tweets */}
+      {/* {tweetsArray.map(oneTweet => {
+        return <Tweet tweet={oneTweet}/>;
+      })} */}
     </div>
   );
 }
